@@ -242,26 +242,17 @@ Kendala.
 Pada soal ini diminta untuk merapikan file dengan dikategorikan berdasarkan ekstensinya, yakni file dipindahkan ke folder yang memiliki nama sama dengan ekstensi file tersebut. Contohnya **file1.jpg** akan dipindah ke folder **jpg**
 
 Adapun terdapat beberapa opsi,
-1. opsi -f
-digunakan untuk menambahkan argumen file yang bisa dikategorikan sebanyak yang diinginkan pengguna.
-
-Output yang dikeluarkan adalah,
+1. opsi -f digunakan untuk menambahkan argumen file yang bisa dikategorikan sebanyak yang diinginkan pengguna. Output yang dikeluarkan adalah,
 ```
 <!-- jika berhasil --> Berhasil Dikategorikan
 <!-- jika gagal --> Sad, gagal :(
 ```
-2. opsi -d
-digunakan untuk mengkategorikan directory. Namun, user hanya bisa memasukkan input sebanyak satu directory saja
-
-Output yang dikeluarkan adalah,
+2. opsi -d digunakan untuk mengkategorikan directory. Namun, user hanya bisa memasukkan input sebanyak satu directory saja. Output yang dikeluarkan adalah,
 ```
 <!-- jika berhasil --> Direktori sukses disimpan!
 <!-- jika gagal --> Yah, gagal disimpan :(
 ```
-3. opsi *
-Opsi ini akan mengkategorikan seluruh file yang ada di working directory ketika menjalankan program C tersebut
-
-Adapun pada file yang tidak memiliki ekstensi, maka file tersebut akan disimpan di folder **Unknown**. Begitu juga dengan file hidden, akan masuk ke folder **Hidden**
+1. opsi * akan mengkategorikan seluruh file yang ada di working directory ketika menjalankan program C tersebut. Adapun pada file yang tidak memiliki ekstensi, maka file tersebut akan disimpan di folder **Unknown**. Begitu juga dengan file hidden, akan masuk ke folder **Hidden**
 
 
 **Pembahasan:**
