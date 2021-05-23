@@ -252,7 +252,7 @@ Adapun terdapat beberapa opsi,
 <!-- jika berhasil --> Direktori sukses disimpan!
 <!-- jika gagal --> Yah, gagal disimpan :(
 ```
-1. opsi * akan mengkategorikan seluruh file yang ada di working directory ketika menjalankan program C tersebut. Adapun pada file yang tidak memiliki ekstensi, maka file tersebut akan disimpan di folder **Unknown**. Begitu juga dengan file hidden, akan masuk ke folder **Hidden**
+3. opsi * akan mengkategorikan seluruh file yang ada di working directory ketika menjalankan program C tersebut. Adapun pada file yang tidak memiliki ekstensi, maka file tersebut akan disimpan di folder **Unknown**. Begitu juga dengan file hidden, akan masuk ke folder **Hidden**
 
 
 **Pembahasan:**
