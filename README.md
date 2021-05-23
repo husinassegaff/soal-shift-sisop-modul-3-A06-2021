@@ -14,10 +14,16 @@ Jawaban soal praktikum Sistem Operasi modul 3.
 
 ## Tabel Konten
 
-- [Soal 1](#soal-1)
-  - [Soal Client](#soal-client)
-  - [Soal Server](#soal-server)
 - [soal-shift-sisop-modul-3-A06-2021](#soal-shift-sisop-modul-3-a06-2021)
+  - [Tabel Konten](#tabel-konten)
+  - [Soal 1](#soal-1)
+    - [Soal Client](#soal-client)
+    - [Soal Server](#soal-server)
+  - [Soal 2](#soal-2)
+    - [Soal 2.a](#soal-2a)
+    - [Soal 2.b](#soal-2b)
+    - [Soal 2.c](#soal-2c)
+  - [Soal 3](#soal-3)
 
   - [Tabel Konten](#tabel-konten)
   - [Soal 1](#soal-1)
@@ -1001,13 +1007,7 @@ int main(int argc, char *argv[]) {
 }
 ```
 
-<<<<<<< HEAD
--
--
--
-=======
 - Untuk opsi **-f** dapat diselesaikan dengan membuat thread pada tiap file yang ingin dikategorikan serta melakukan thread join agar bisa berjalan secara bersamaan. Berikut kode yang menjalankan hal tersebut
->>>>>>> 5554b05ce3c42ff281a44128cbd7bafcd875de86
 
 ```
 for(int i=2; i<argc; i++) {
@@ -1185,8 +1185,4 @@ void *move(void *arg) {
   ![Bukti3(5)](soal3/Bukti3(5).PNG)
 
 **Kendala :**\
-<<<<<<< HEAD
-Kendala.
-=======
 Pada pengkategorian file masih terdapat kesalahan dalam penamaan folder dan rekursifnya yang belum berjalan dengan sempurna
->>>>>>> 5554b05ce3c42ff281a44128cbd7bafcd875de86
