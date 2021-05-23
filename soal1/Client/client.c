@@ -67,12 +67,9 @@ bool isExist(char fileName[]){
 void *sending(void *arg){
   // send file to server, using encodeFile()
   char c[BUFSIZ];
-  char *g;
   char buffer[BUFSIZ];
-  char data[100];
   char name[100];
   int fd;
-  int file_size;
   int flag = 1;
   ssize_t sent_bytes = 0;
   ssize_t remain_data = 0;
@@ -101,34 +98,11 @@ void *sending(void *arg){
 
     while (((sent_bytes = sendfile(sock, fd, &offset, BUFSIZ)) > 0))
     {
-            // fprintf(stdout, "1. Server sent %d bytes from file's data, offset is now : %ld and remaining data = %d\n", sent_bytes, offset, remain_data);
             remain_data -= sent_bytes;
-            fprintf(stdout, "2. Server sent %ld bytes from file's data, offset is now : %ld and remaining data = %ld\n", sent_bytes, offset, remain_data);
+            fprintf(stdout, "Server sent %ld bytes from file's data, offset is now : %ld and remaining data = %ld\n", sent_bytes, offset, remain_data);
     }
     close(fd);
     pthread_cancel(sendings);
-  //   prompt "File to send found"
-  //   FILE *source = fopen(data, "wb");
-  //   size_t n;
-  //   unsigned char buff[BUFSIZ];
-  //   unsigned char bert[BUFSIZ];
-  //   do {
-  //       n = fgets(buff, BUFSIZ, source);
-  //       if (n){
-  //         snprintf(bert,sizeof(bert),"%zu",n);
-  //         send(sock, buff, sizeof(buff), 0);
-  //         // send(sock, bert, BUFSIZ, 0);
-  //       }
-  //       else break;
-  //   } while(n > 0);
-
-  //   while(fgets(buff, BUFSIZ, source) != NULL) {
-  //   if (sendfile(sock, buff, sizeof(buff), 0) == -1) {
-  //     perror("[-]Error in sending file.");
-  //     exit(1);
-  //   }
-  //   bzero(buff, BUFSIZ);
-  // }
   } 
 }
 
@@ -180,11 +154,11 @@ void *print_routine(void *arg) {
       char buffer2[BUFSIZ];
       strcpy(buffer2, buffer);
       char *token = strtok(buffer2, "\n");
-      if (strcmp(token, "Uhuk Start") == 0) {
+      if (strcmp(token, "Start") == 0) {
         input_mode = 1;
         resetTermios();
         pthread_cancel(scanner);
-      } else if (strcmp(token, "Uhuk Stop") == 0) {
+      } else if (strcmp(token, "Stop") == 0) {
         input_mode = 0;
         resetTermios();
         pthread_cancel(scanner);

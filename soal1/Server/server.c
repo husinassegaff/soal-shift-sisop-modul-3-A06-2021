@@ -289,23 +289,23 @@ void encodeFile(char filepath[]){
   // encode file into binary file
 }
 
-void findFile(char filename[]){
-  char buffer[BUFSIZ];
-   int counter = 5;
-   FILE *fp = fopen("files.tsv", "r");
-  while(fgets(buffer, BUFSIZ, fp) != NULL) {
-    if(strstr(buffer,filename))
-      counter = 5;
-    if(buffer[0]=='\n') {
-        continue;
-    } else {
-      if(counter >0)
-        send(queue_front(&myQueue)->idsock, buffer, BUFSIZ, 0);
-    }
-    counter--;
-  }
-  fclose(fp);
-}
+// void findFile(char filename[]){
+//   char buffer[BUFSIZ];
+//    int counter = 5;
+//    FILE *fp = fopen("files.tsv", "r");
+//   while(fgets(buffer, BUFSIZ, fp) != NULL) {
+//     if(strstr(buffer,filename))
+//       counter = 5;
+//     if(buffer[0]=='\n') {
+//         continue;
+//     } else {
+//       if(counter >0)
+//         send(queue_front(&myQueue)->idsock, buffer, BUFSIZ, 0);
+//     }
+//     counter--;
+//   }
+//   fclose(fp);
+// }
 
 void serverLog(char activity[], char username[]){
   // add server activity to log file
@@ -381,10 +381,10 @@ void prompt(int prompt_no) {
     sprintf(buffer, "\e[?25h");
   }
   if (prompt_no == 999) {
-    sprintf(buffer, "Uhuk Start\n");
+    sprintf(buffer, "Start\n");
   }
   if (prompt_no == 998) {
-    sprintf(buffer, "Uhuk Stop\n");
+    sprintf(buffer, "Stop\n");
   }
 
   send(queue_front(&myQueue)->idsock, buffer, BUFSIZ, 0);
