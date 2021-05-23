@@ -669,7 +669,7 @@ Sulit mengatur program flow.
 - 1.H (Sulit mengatur program flow.)
 
 **Bukti :**
-
+https://user-images.githubusercontent.com/74223938/119265834-61224080-bc12-11eb-95d8-a95d21f810f3.mp4
 ---
 
 ## Soal 2
